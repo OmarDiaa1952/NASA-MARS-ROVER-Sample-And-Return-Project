@@ -166,6 +166,6 @@ def completed_mission(Rover, min_samples=5, min_mapped=95, max_time=850):
             ) or Rover.total_time >= max_time 
 
 
-def reached_home(Rover, max_dist=0.1):
+def reached_home(Rover, max_dist=2):
     """Check if rover has reached home after completing mission."""
     return Rover.going_home and Rover.home_distance < max_dist
